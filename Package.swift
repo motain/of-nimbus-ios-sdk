@@ -35,9 +35,6 @@ let package = Package(
            name: "NimbusFANKit",
            targets: ["NimbusRenderFANKit", "NimbusRequestFANKit", "FBAudienceNetwork"]),
         .library(
-           name: "NimbusLiveRampKit",
-           targets: ["NimbusLiveRampKit"]),
-        .library(
            name: "NimbusRequestAPSKit",
            targets: ["NimbusRequestAPSKit", "DTBiOSSDK"]),
         .library(
@@ -69,7 +66,6 @@ let package = Package(
            targets: ["NimbusUnityKit"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/LiveRamp/ats-sdk-ios.git", from: "2.5.0"),
         .package(url: "https://github.com/birdrides/mockingbird.git", from: "0.20.0"),
         .package(url: "https://github.com/Vungle/VungleAdsSDK-SwiftPackageManager.git", from: "7.6.0"),
         .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", from: "12.0.0"),
@@ -112,9 +108,6 @@ let package = Package(
         .target(
             name: "NimbusGoogleKit",
             dependencies: ["NimbusTarget", .GoogleMobileAds]),
-        .target(
-            name: "NimbusLiveRampKit",
-            dependencies: ["NimbusRequestTarget", .LiveRamp]),
         .target(
             name: "NimbusRequestAPSKit",
             dependencies: ["NimbusRequestTarget"]),
@@ -178,7 +171,6 @@ extension Target {
 }
 
 extension Target.Dependency {
-    static let LiveRamp = product(name: "LRAtsSDK", package: "ats-sdk-ios")
     static let MockingBird = product(name: "Mockingbird", package: "Mockingbird")
     static let Vungle = product(name: "VungleAdsSDK", package: "VungleAdsSDK-SwiftPackageManager")
     static let GoogleMobileAds = product(
