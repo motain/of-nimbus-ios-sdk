@@ -36,7 +36,7 @@ let package = Package(
            targets: ["NimbusRenderFANKit", "NimbusRequestFANKit", "FBAudienceNetwork"]),
         .library(
            name: "NimbusRequestAPSKit",
-           targets: ["NimbusRequestAPSKit", "DTBiOSSDK"]),
+           targets: ["NimbusRequestAPSKit"]),
         .library(
            name: "NimbusUnityKit",
            targets: ["NimbusUnityKit", "UnityAds"]),
@@ -137,10 +137,6 @@ let package = Package(
             name: "OMSDK_Adsbynimbus",
             url: "https://adsbynimbus-public.s3.amazonaws.com/iOS/external/omsdk/1.6.0/OMSDK_Adsbynimbus-1.6.0.zip",
             checksum: "ee15f532875ee4c2d2f8ab17117842becada706aaedd2448fa423ffc995086f3"),
-        .binaryTarget(
-             name: "DTBiOSSDK",
-             url: "https://mdtb-sdk-packages.s3.us-west-2.amazonaws.com/iOS_APS_SDK/APS_iOS_SDK-5.2.0.zip",
-             checksum: "296bfb7ef3c0f885efc737b776cd5587a4fc3773d753b696b20eb5945a5d2a6f"),
         .binaryTarget(
             name: "FBAudienceNetwork",
             url: "https://adsbynimbus-public.s3.amazonaws.com/iOS/external/facebook/6.20.1/FBAudienceNetwork.zip",
