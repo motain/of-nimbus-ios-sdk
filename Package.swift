@@ -50,9 +50,6 @@ let package = Package(
            name: "NimbusMobileFuseKit",
            targets: ["NimbusMobileFuseKit"]),
         .library(
-           name: "NimbusMolocoKit",
-           targets: ["NimbusMolocoKit"]),
-        .library(
            name: "NimbusInMobiKit",
            targets: ["NimbusInMobiKit"]),
         .library(
@@ -121,9 +118,6 @@ let package = Package(
             name: "NimbusMobileFuseKit",
             dependencies: ["NimbusRenderTarget", "NimbusRequestTarget", "MobileFuseSDK"]),
         .target(
-            name: "NimbusMolocoKit",
-            dependencies: ["NimbusRenderTarget", "NimbusRequestTarget", "MolocoSDK"]),
-        .target(
             name: "NimbusInMobiKit",
             dependencies: ["NimbusRenderTarget", "NimbusRequestTarget", "InMobiSDK"]),
         .target(
@@ -149,10 +143,6 @@ let package = Package(
             name: "UnityAds",
             url: "https://github.com/Unity-Technologies/unity-ads-ios/releases/download/4.15.1/UnityAds.zip",
             checksum: "14bf337196be779f91f894c6bc919b3394cf599a6c3a2e3da434773906b68a68"),
-        .binaryTarget(
-            name: "MolocoSDK",
-            url: "https://moloco-ios-build.s3.amazonaws.com/moloco-sdk/MolocoSDK-3.13.1.zip",
-            checksum: "7ac361b9b2e30eb82dfdd246440b0088c8e1d1e6dcc69f3362195b168cdbc9a0"),
         .binaryTarget(
             name: "InMobiSDK",
             url: "https://dl.inmobi.com/inmobi-sdk/IM/InMobi-iOS-SDK-10.8.6.zip",
